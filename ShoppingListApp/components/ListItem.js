@@ -1,12 +1,12 @@
 import React from "react";
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
-const ListItem = ({item}) => {
+const ListItem = ({item, deleteItem}) => {
   return(
     <TouchableOpacity style={styles.listItem}>
       <View style={styles.listItemView}>
           <Text style={styles.listItemText}>{item.text}</Text>
-          <Ionicons name="remove" size={32} color="firebrick" />
+          <Ionicons name="remove" size={32} color="firebrick" onPress={() => deleteItem(item.id)}/>
       </View>
     </TouchableOpacity>
   )
