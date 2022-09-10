@@ -10,9 +10,9 @@ const AddItem = ({addItem}) => {
   return(
     <View style={styles.header}>
       <TextInput placeholder="Add Item..." style={styles.input} onChangeText={onChange}></TextInput>
-          <TouchableOpacity style={styles.btn} onPress={() => addItem(text)}>
+          <TouchableOpacity style={[styles.btn, styles.buttonOutline]} onPress={() => addItem(text)}>
               <Text style={styles.btnText}>
-              <Ionicons name="add" size={20} color="green"></Ionicons> Add Item
+              <Ionicons name="add" size={20} color="#0782F9"></Ionicons> <Text style={styles.buttonOutlineText}>Add Item</Text>
               </Text>
           </TouchableOpacity>
     </View>
@@ -34,7 +34,18 @@ const styles = StyleSheet.create({
         color: 'darkslateblue',
         fontSize: 20,
         textAlign: 'center'
-    }
+    },
+    buttonOutline: {
+        backgroundColor: 'white',
+        marginTop: 5,
+        borderColor: '#0782F9',
+        borderWidth: 2,
+      },
+      buttonOutlineText: {
+        color: '#0782F9',
+        fontWeight: '700',
+        fontSize: 16,
+      },
 })
 
 export default AddItem;

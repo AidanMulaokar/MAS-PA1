@@ -33,10 +33,10 @@ const styles = StyleSheet.create({
   header: {
       height: 50,
       padding: 10,
-      backgroundColor: 'darkslateblue'
+      backgroundColor: '#0782F9'
   },
   text: {
-      color: 'darkslateblue',
+      color: '#0782F9',
       fontSize: 23,
       textAlign: 'center'
   },
@@ -56,6 +56,6 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: '700',
     fontSize: 16,
-  }
+  },
 })
 export default Header;
